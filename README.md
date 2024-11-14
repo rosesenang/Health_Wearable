@@ -38,3 +38,37 @@ The project architecture includes:
 │        ├──── variables.tf
 │        ├──── outputs.tf              
 └── README.md                   
+
+### Setup
+
+### Requirements
+- Terraform
+- AWS CLI
+- AWS IAM account 
+
+Sign in to your AWS cli using the command below
+```bash
+aws configure
+```
+
+Clone this repository to your desired folder:
+
+```bash
+git clone https://github.com/rosesenang/Grad-Project-Team.git
+cd Grad-Project-Team
+```
+Deploy Infrastructure: Run the following commands to deploy infrastructure to AWS:
+
+```bash
+terraform init
+terraform apply
+
+cd /modules/vpc/
+terraform init
+terraform apply
+
+cd ../..
+cd /modules/event_bus/
+terraform init
+terraform apply
+```
